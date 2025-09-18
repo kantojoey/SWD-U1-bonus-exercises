@@ -1,0 +1,6 @@
+{
+  "name": "modern-js",
+  "version": "1.0.0",
+  "description": "Changing these to ES modules for practicing modern import/export syntax.",
+  "type": "module"
+}

@@ -16,7 +16,7 @@
 
 // EXAMPLE: Go to 01-arrowFunctions.js and export reverseString() as the default export
 // Import it here:
-import reverseString from './01-arrowFunctions';
+import reverseString from './01-arrowFunctions.js';
 
 // Use it here with the test string and print the result:
 let testString = 'This is not a palindrome.';
@@ -25,7 +25,7 @@ console.log(reversed);
 
 // EXAMPLE: Go to 02-higherOrderFunctions.js and export both numberArray and fruits
 // Import them here using destructuring:
-import { numberArray, fruits } from './02-higherOrderFunctions';
+import { numberArray, fruits } from './02-higherOrderFunctions.js';
 
 // Print both data structures
 console.log(numberArray);
@@ -35,7 +35,7 @@ console.log(fruits);
 
 // TODO: Go to 04-logicalOrAndTernary.js and export the avengers object as the default export
 // Import it here:
-import avengers from './04-logicalORandTernary';
+import avengers from './04-logicalORandTernary.js';
 
 // Print it here:
 console.log(avengers);
@@ -48,7 +48,7 @@ import {
 	userInfo,
 	faveFruits,
 	dinner,
-} from './05-destructuring';
+} from './05-destructuring.js';
 
 // Print all data structures
 console.log(phoneNumberParts);
