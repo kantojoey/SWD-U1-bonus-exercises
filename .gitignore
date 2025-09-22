@@ -8,3 +8,7 @@
 # Another local npm file that would only need to be
 # included if using GitHub Actions for this repo
 **/package-lock.json
+
+# Files just for my use
+json/bonus-exercise/index.html
+json/bonus-exercise/styles.css

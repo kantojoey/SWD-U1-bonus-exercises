@@ -1,0 +1,22 @@
+JSON Bonus Exercise
+
+Take a look at the web page shown in the example PNG in this directory. Don't worry about the HTML or CSS; that's not the point of this exercise. Just consider the following:
+  - How do you imagine the data about artists, albums, and songs would be structured if it was JSON fetched from an external API?
+  - How might other data be included (even if it's not being used right now on the page)?
+
+Use the file favoriteMusic.json to structure a single array of objects and add properties with nested data structures as needed.
+
+Include the following for each object: 
+  - Artist's name
+  - Albums
+  - Favorite songs 
+
+Make sure you are not combining information within a single string just because you see it displayed that way (e.g., "Oasis | Seven Seas").
+  
+Now, add in other information about each artist, album, or song at the appropriate level within the nested data structures (you can make it up):
+  - Album's release date
+  - Artist's genre(s)
+  - Length of song (e.g. "4:32")
+  - etc.
+
+Bonus: Use your own favorite music!
