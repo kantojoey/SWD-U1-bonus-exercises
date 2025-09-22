@@ -1,0 +1,41 @@
+body {
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	background-color: ghostwhite;
+	color: #403682;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+    background-color: #403682;
+				color: ghostwhite;
+				margin: 0;
+				padding: 30px;
+}
+
+main {
+    margin: 0;
+    padding: 30px;
+}
+
+h2 {
+    margin: 0;
+}
+
+#fave-songs {
+    margin: 30px 0px 0px
+}
+
+.artist-columns {
+    display: flex; 
+    flex-direction: row; 
+    gap: 20px
+}
+
+.artist-and-songs {
+    display: flex; 
+    flex-direction: column
+}
+
+
