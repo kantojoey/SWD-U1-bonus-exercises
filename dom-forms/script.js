@@ -70,13 +70,13 @@ styleInput.addEventListener('change', () => {
 
 // Update content of card preview with user input
 nameInput.addEventListener('input', () => {
-	name.innerHTML = nameInput.value || 'Your Name';
+	name.innerText = nameInput.value || 'Your Name';
 });
 address1Input.addEventListener('input', () => {
-	address1.innerHTML = address1Input.value || 'Your Address Line 1';
+	address1.innerText = address1Input.value || 'Your Address Line 1';
 });
 address2Input.addEventListener('input', () => {
-	address2.innerHTML = address2Input.value || 'Your Address Line 2';
+	address2.innerText = address2Input.value || 'Your Address Line 2';
 });
 omitAddress2.addEventListener('input', () => {
 	if (omitAddress2.checked) {
@@ -88,7 +88,7 @@ omitAddress2.addEventListener('input', () => {
 
 // Update phone and email on same line
 function updatePhoneAndEmail() {
-	phoneEmail.innerHTML = `${phoneInput.value || 'Your Phone'} | ${
+	phoneEmail.innerText = `${phoneInput.value || 'Your Phone'} | ${
 		emailInput.value || 'Your Email'
 	}`;
 }
@@ -96,7 +96,7 @@ phoneInput.addEventListener('input', updatePhoneAndEmail);
 emailInput.addEventListener('input', updatePhoneAndEmail);
 
 // Reset form & card preview
-resetButton.addEventListener('click', function (event) {
+resetButton.addEventListener('click', event => {
 	// Confirm before resetting
 	let shouldReset = confirm('\nAre you sure you want to start over?\n');
 	if (!shouldReset) {
@@ -104,10 +104,10 @@ resetButton.addEventListener('click', function (event) {
 		return; // exit function early
 	}
 	// Reset content on card preview
-	name.innerHTML = 'Your Name';
-	address1.innerHTML = 'Your Address Line 1';
-	address2.innerHTML = 'Your Address Line 2';
-	phoneEmail.innerHTML = 'Your Phone | Your Email';
+	name.innerText = 'Your Name';
+	address1.innerText = 'Your Address Line 1';
+	address2.innerText = 'Your Address Line 2';
+	phoneEmail.innerText = 'Your Phone | Your Email';
 
 	// Reset styling on card preview
 	cardBkg.style.backgroundImage = 'none';
@@ -120,7 +120,7 @@ resetButton.addEventListener('click', function (event) {
 });
 
 // This will run only after the user passes built-in validation
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', event => {
 	// You could add custom validation here along with
 	// event.preventDefault() if they don't pass
 	// We aren't really saving anything to a database in this example,
