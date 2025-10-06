@@ -15,15 +15,11 @@ document.addEventListener('click', function (event) {
         
 	}
 
-	// Challenge! Use async/await syntax for this one.
 	// RANDOM CAT PIC courtesy of https://thecatapi.com/
 	// You will need to request a free key
 	// Use the API documentation to look up the correct endpoint for a random photo
 	// Note: a header will be required!
 	if (event.target.id === 'cat-button') {
-		// TODO: Write an async function to fetch data and put image on page
-
-		// TODO: Call your async function to execute the fetch
-
+		// TODO: Fetch data and put an image on the page
 	}
 });
