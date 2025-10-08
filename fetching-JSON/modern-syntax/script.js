@@ -1,83 +1,60 @@
-import { getRandomElement, getTitleCase } from './shared/utils.js';
-
 /* Put shared HTML on all pages */
+
+// Parse window.location.href to get name of page based on html file name
 const url = new URL(window.location.href);
 const pathNameArray = url.pathname.split('/');
 const fileName = pathNameArray[pathNameArray.length - 1];
 const pageName = fileName.slice(0, fileName.indexOf('.'));
-const titleText = pageName == 'index' ? 'Welcome' : getTitleCase(fileName);
-const navPath = pageName == 'index' ? '/pages' : '';
-const homePath = pageName == 'index' ? '' : '../index.html';
-const head = document.querySelector('head');
-const title = document.querySelector('title');
 
-const header = document.querySelector('header');
-const footer = document.querySelector('footer');
-const thisYear = new Date().getFullYear();
+// TODO: Set title, nav paths, and home path depending on whether page name is 'index', 
 
-title.innerText = `Main Street Pet Rescue | ${titleText}`;
-head.innerHTML += `<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Damion&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    `;
 
-header.innerHTML = `<h1>Main Street Pet Rescue</h1>
-    <nav>
-        <li class="nav-link"><a href="${homePath}">Home</a></li>
-        <li class="nav-link"><a href=".${navPath}/adopt.html">Adopt</a></li>
-        <li class="nav-link"><a href=".${navPath}/volunteer.html">Volunteer</a></li>
-        <li class="nav-link"><a href=".${navPath}/donate.html">Donate</a></li>
-        <li class="nav-link"><a href=".${navPath}/location.html">Location</a></li>
-    </nav>`;
+// TODO: Get current year
 
-footer.innerHTML = `
-    <div>Main Street Pet Rescue | 987 Main Street | St. Louis, MO 63101</div>
-    <div>&copy; ${thisYear} Friends of MSPR</div>
-    `;
+
+// TODO: Establish JS objects for specific elements where dynamic content is needed
+
+
+// TODO: Add title text for browser tab
+
+
+// TODO: Add Google fonts to head
+
+
+// TODO: Add org name and nav menu to header
+
+
+// TODO: Add fine print to footer
+
 
 /*
-    Fetch photos URLs from two different public APIs (linked below)
+    Fetch photos URLs from a public API using modern syntax (linked below)
 */
 
-const photoSection = document.getElementById('photo-section');
-const photoUrls = [];
+// TODO: Create object for span where image will be placed
 
-// Call the async function to execute the fetch code
-getCatPics();
+
+// TODO: Create an array to hold fetched URLs
+
+
+// TODO: Call the async function defined below to execute the fetch code
+
 
 // RANDOM CAT PICS courtesy of https://thecatapi.com/
-// Fetch 20 random photos
 async function getCatPics() {
-	let response = await fetch(
-		'https://api.thecatapi.com/v1/images/search?limit=20',
-		{
-			headers: {
-				'x-api-key':
-					'live_OGxGd4Qnu16oAEBlonS9roxlp8vKLHd0CNZ7KHIE67CqGGGBPJdg8FSbWEgMMoNA',
-			},
-		}
-	);
-	let data = await response.json();
 
-	console.log(data);
+    // TODO: Fetch 20 random photos using modern async/await syntax
 
-	// Add all urls to photoUrls array (see logged data for structure)
-	for (let obj of data) {
-		photoUrls.push(obj.url);
-	}
 
-	// Put images on page
-	displayRandomPhotos();
+    // TODO: Check data in console
+
+
+	// TODO: Add all urls to photoUrls array (see logged data for structure)
+
+
+	// TODO: Put images on page after async fetch is complete
+
 }
 
-function displayRandomPhotos(amount = 1) {
-	const randomUrls = [];
-	let randomUrl = getRandomElement(photoUrls);
-	while (randomUrls.length < amount && !randomUrls.includes(randomUrl)) {
-		randomUrls.push(randomUrl);
-		randomUrl = getRandomElement(photoUrls);
-	}
-	for (let url of randomUrls) {
-		photoSection.innerHTML += `<img src="${url}" maxwidth="400" />`;
-	}
-}
+// TODO: Write helper function to display one or more photos
+
