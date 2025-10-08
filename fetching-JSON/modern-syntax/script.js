@@ -42,6 +42,9 @@ footer.innerHTML = `
 const photoSection = document.getElementById('photo-section');
 const photoUrls = [];
 
+// Call the async function to execute the fetch code
+getCatPics();
+
 // RANDOM CAT PICS courtesy of https://thecatapi.com/
 // Fetch 20 random photos
 async function getCatPics() {
@@ -63,22 +66,18 @@ async function getCatPics() {
 		photoUrls.push(obj.url);
 	}
 
-    // Put images on page
+	// Put images on page
 	displayRandomPhotos();
 }
 
 function displayRandomPhotos(amount = 1) {
-    const randomUrls = [];
-    let randomUrl = getRandomElement(photoUrls);
+	const randomUrls = [];
+	let randomUrl = getRandomElement(photoUrls);
 	while (randomUrls.length < amount && !randomUrls.includes(randomUrl)) {
-        randomUrls.push(randomUrl);
+		randomUrls.push(randomUrl);
 		randomUrl = getRandomElement(photoUrls);
 	}
-    for (let url of randomUrls) {
-        photoSection.innerHTML += `<img src="${url}" maxwidth="400" />`;
-    }
+	for (let url of randomUrls) {
+		photoSection.innerHTML += `<img src="${url}" maxwidth="400" />`;
+	}
 }
-
-// Call both async functions to execute the fetch code
-getCatPics();
-fetchDogPics();
