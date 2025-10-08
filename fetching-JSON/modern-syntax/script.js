@@ -1,13 +1,16 @@
 import { getRandomElement, getTitleCase } from './shared/utils.js';
 
 /* Put shared HTML on all pages */
+
 const url = new URL(window.location.href);
 const pathNameArray = url.pathname.split('/');
 const fileName = pathNameArray[pathNameArray.length - 1];
 const pageName = fileName.slice(0, fileName.indexOf('.'));
+
 const titleText = pageName == 'index' ? 'Welcome' : getTitleCase(fileName);
 const navPath = pageName == 'index' ? '/pages' : '';
 const homePath = pageName == 'index' ? '' : '../index.html';
+
 const head = document.querySelector('head');
 const title = document.querySelector('title');
 
@@ -36,7 +39,7 @@ footer.innerHTML = `
     `;
 
 /*
-    Fetch photos URLs from two different public APIs (linked below)
+    Fetch photos URLs from public API using modern syntax (linked below)
 */
 
 const photoSection = document.getElementById('photo-section');
@@ -46,8 +49,9 @@ const photoUrls = [];
 getCatPics();
 
 // RANDOM CAT PICS courtesy of https://thecatapi.com/
-// Fetch 20 random photos
 async function getCatPics() {
+
+    // Fetch 20 random photos using async/await syntax
 	let response = await fetch(
 		'https://api.thecatapi.com/v1/images/search?limit=20',
 		{
