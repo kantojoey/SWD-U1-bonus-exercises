@@ -126,7 +126,24 @@ let fruits = [
 // Print the original array and the new array
 // Do an identity check on the arrays Do an identity check on the same object from each array
 
+const fruitsWithQuantity = fruits.map(fruit => {
+	return { ...fruit, quantity: 12 };
+});
+console.log(fruits);
+console.log(fruitsWithQuantity);
 
-
+// False because it compares the arrays and they are both different arrays
+console.log(fruits == fruitsWithQuantity);
+// False because it has created an entirely new object, so even though they have the same value, they technically point to different referenced
+console.log(fruits[2] == fruitsWithQuantity[2]);
 
 // What happens if you don't use the spread operator to return a new object?
+const sameFruitsWithQuantity = fruits.map(fruit => {
+    fruit.quantity = 12;
+	return fruit;
+});
+
+// False because it compares the arrays and they are both different arrays
+console.log(fruits == sameFruitsWithQuantity);
+// True because it mapped through and iterated over the original array, so even though they are different arrays, the values still point to the same reference
+console.log(fruits[2] == sameFruitsWithQuantity[2]);
